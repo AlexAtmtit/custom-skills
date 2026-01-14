@@ -1,6 +1,6 @@
-# Claude Skills
+# Custom Skills
 
-A collection of custom skills for [Claude Code](https://docs.anthropic.com/en/docs/claude-code).
+My collection of custom skills for Claude Code, Droid, and Codex.
 
 ## Skills
 
