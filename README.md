@@ -1,4 +1,4 @@
-# Custom Skills
+# Custom Skills for Claude Code, Droid, and Codex.
 
 My collection of custom skills for Claude Code, Droid, and Codex.
 
