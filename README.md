@@ -7,7 +7,7 @@ My collection of custom skills for Claude Code, Droid, and Codex.
 | Skill | Description |
 |-------|-------------|
 | [🔍 codex-review](#-codex-review) | Automated code review using Codex CLI with Ralph Wiggum loop for continuous improvement |
-| [🤖 claude-agent-sdk](#-claude-agent-sdk) | Comprehensive reference for building autonomous AI agents with Claude Agent SDK |
+| [🤖 claude-agent-sdk](#-claude-agent-sdk) | Reference docs that help Claude Code build agents using `@anthropic-ai/claude-agent-sdk` |
 
 ---
 
@@ -59,40 +59,22 @@ That's it! Claude Code launches Codex, runs the review, makes fixes, runs it aga
 
 ## 🤖 claude-agent-sdk
 
-**[claude-agent-sdk](./claude-agent-sdk/)** — Comprehensive reference for building autonomous AI agents with `@anthropic-ai/claude-agent-sdk`. Covers the SDK's query API, tool configuration, hooks, subagents, MCP integration, and structured output.
+**[claude-agent-sdk](./claude-agent-sdk/)** — Reference documentation that helps Claude Code build agents using `@anthropic-ai/claude-agent-sdk`. When you ask Claude to create an agent project, this skill provides the API patterns, tool configurations, and production best practices it needs.
 
-### What It Does
+### What This Skill Does
 
-The Claude Agent SDK is the infrastructure behind Claude Code, exposed as a library. It gives your agents the same capabilities: read files, run commands, edit code, search the web, and more. The key principle: **give Claude a computer** so it can work like humans do on any digital task.
+This skill loads reference documentation into Claude's context when working with the Claude Agent SDK. Instead of Claude guessing at APIs or hallucinating patterns, it has access to:
 
-### Agent Loop Pattern
+- Correct `query()` API syntax and options
+- Working code examples for common agent types
+- Hook configurations for permissions and auditing
+- Subagent patterns for parallel work
+- MCP integration for external services
+- Production deployment and security guidelines
 
-Effective agents follow this feedback loop:
+### When Claude Uses This Skill
 
-```
-gather context → take action → verify work → repeat
-```
-
-### Built-in Tools
-
-| Tool | Purpose |
-|------|---------|
-| Read | Read any file in working directory |
-| Write | Create new files |
-| Edit | Make precise edits to existing files |
-| Bash | Run terminal commands |
-| Glob | Find files by pattern |
-| Grep | Search file contents with regex |
-| WebSearch | Search the web |
-| WebFetch | Fetch and parse web pages |
-| Task | Spawn subagents for parallel work |
-
-### Use Cases
-
-- **Code Review Agents**: Analyze codebases for bugs, security issues, performance problems
-- **Research Agents**: Search and synthesize information from multiple sources
-- **File Automation**: Create, edit, and organize files programmatically
-- **Multi-Agent Orchestration**: Coordinate specialized subagents for complex tasks
+The skill activates automatically when you're working with code that imports from `@anthropic-ai/claude-agent-sdk` or when you ask Claude to build an agent project.
 
 ### Reference Files Included
 
